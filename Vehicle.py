@@ -1,11 +1,13 @@
 class Vehicle:
+	#constructor
 	def __init__(self, fuelType, maxPassangers):
 		self.fuelType = fuelType
 		self.maxPassangers = maxPassangers
 
 	def Move():
 		print("It's moving!")
-
+	
+	#set dan get methods
 	def setFuelType(self, fuelType):
 		self.fuelType = fuelType
 
@@ -19,12 +21,15 @@ class Vehicle:
 		return self.maxPassangers
 
 class Ship(Vehicle):
+	#constructor
 	def __init__(self, fuelType, maxPassangers, age, typ, countryOfManufacture):
+		#menggunakan super() untuk pass attribute" yang ada pada __init__() setelahnya ke Ship
 		super().__init__(fuelType, maxPassangers)
 		self.age = age
 		self.typ = typ
 		self.countryOfManufacture = countryOfManufacture
-
+	
+	#set dan get methods
 	def setAge(self, age):
 		self.age = age
 
@@ -45,12 +50,15 @@ class Ship(Vehicle):
 
 
 class Airplane(Vehicle):
+	#constructor
 	def __init__(self, fuelType, maxPassangers, age, typ, wingsLength):
+		#menggunakan super() untuk pass attribute" yang ada pada __init__() setelahnya ke Airplane
 		super().__init__(fuelType, maxPassangers)
 		self.age = age
 		self.typ = typ
 		self.wingsLength = wingsLength
 
+	#set dan get methods
 	def setAge(self, age):
 		self.age = age
 
