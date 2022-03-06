@@ -1,4 +1,5 @@
 class Person:
+	#constructor
 	def __init__(self, nik, name, gender):
 		self.nik = nik
 		self.name = name
@@ -6,7 +7,8 @@ class Person:
 
 	def sleep():
 		print("Zzzzzzzz")
-
+		
+	#set dan get methods
 	def setNIK(self, nik):
 		self.nik = nik
 
@@ -26,12 +28,15 @@ class Person:
 		return self.gender
 
 class Job(Person):
+	#constructor
 	def __init__(self, nik, name, gender, nip, companyName, position):
+		#menggunakan super() untuk pass attribute" yang ada pada __init__() setelahnya ke Job
 		super().__init__(nik, name, gender)
 		self.nip = nip
 		self.companyName = companyName
 		self.position = position
-
+	
+	#set dan get methods
 	def setNIP(self, nip):
 		self.nip = nip
 
@@ -51,12 +56,15 @@ class Job(Person):
 		return self.position
 
 class Driver(Person):
+	#constructor
 	def __init__(self, nik, name, gender, lisenceID, activeUntil, vehicleType):
+		#menggunakan super() untuk pass attribute" yang ada pada __init__() setelahnya ke Driver
 		super().__init__(nik, name, gender)
 		self.lisenceID = lisenceID
 		self.activeUntil = activeUntil
 		self.vehicleType = vehicleType
-
+	
+	#set dan get methods
 	def setLisenceID(self, lisenceID):
 		self.lisenceID = lisenceID
 
